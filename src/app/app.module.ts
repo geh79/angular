@@ -3,6 +3,9 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
+//routes
+import { APP_ROUTING } from "./app.routes";
+
 //components
 import { LanzamientosComponent } from './components/lanzamientos/lanzamientos.component';
 import { HomeComponent } from './components/home/home.component';
@@ -17,7 +20,8 @@ import { ArtistaComponent } from './components/artista/artista.component';
     ArtistaComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    APP_ROUTING
   ],
   providers: [],
   bootstrap: [AppComponent]
