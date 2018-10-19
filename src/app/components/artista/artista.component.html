@@ -1,3 +1,18 @@
-<p>
-  artista works!
-</p>
+<div class="contenedor">
+  <img [src]="artista.images | imagenes" alt="{{artista.name}}">
+  <h2>{{artista.name}}</h2>
+  
+  <table>
+    <tr>
+      <th>Foto</th>
+      <th>Album</th>
+      <th>Cancióm</th>
+    </tr>
+    <tr *ngFor="let item of top">
+      <th><img [src]="item.album.images | imagenes" alt="{{item.album.name}}"></th>
+      <th>{{item.album.name}}</th>
+      <th>{{item.name}}</th>
+    </tr>
+  </table>
+
+</div>
