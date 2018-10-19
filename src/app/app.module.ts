@@ -10,6 +10,7 @@ import { APP_ROUTING } from "./app.routes";
 import { LanzamientosComponent } from './components/lanzamientos/lanzamientos.component';
 import { HomeComponent } from './components/home/home.component';
 import { ArtistaComponent } from './components/artista/artista.component';
+import { ImagenesPipe } from './pipes/imagenes.pipe';
 
 
 @NgModule({
@@ -17,11 +18,12 @@ import { ArtistaComponent } from './components/artista/artista.component';
     AppComponent,
     LanzamientosComponent,
     HomeComponent,
-    ArtistaComponent
+    ArtistaComponent,
+    ImagenesPipe    
   ],
   imports: [
     HttpClientModule,
-    BrowserModule,    
+    BrowserModule,
     APP_ROUTING
   ],
   providers: [],
