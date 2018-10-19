@@ -1,0 +1,18 @@
+.lanzamientos-contenedor{
+  display: flex;
+
+}
+
+.lanzamientos-item {
+  width: 100%;
+  background: #212121;
+  display: inline-flex;
+}
+.artista-item{
+  cursor: pointer;
+}
+
+ul{
+  list-style: none;
+  padding-left: 0px;
+}

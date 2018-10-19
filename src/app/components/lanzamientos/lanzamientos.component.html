@@ -1,3 +1,19 @@
-<p>
-  lanzamientos works!
-</p>
+<div class="contenedor">
+  <ul class="lanzamientos-contenedor">
+    <li *ngFor="let item of dataLanzamientos" class="lanzamientos-item" >
+      <div>
+        <!-- img -->
+        <img [src]="item.images | imagenes" alt="{{item.name}}">
+        <!-- nombre -->
+        <p>{{item.name}}</p>
+        <!-- artistas -->
+        <ul>
+          <li *ngFor="let art of item.artists" (click)="cargarartista( art )" class="artista-item">
+            <p>{{art.name}}</p>
+          </li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+
+</div>
