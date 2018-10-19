@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HttpClientModule } from "@angular/common/http";
 import { AppComponent } from './app.component';
 
 //routes
@@ -20,7 +20,8 @@ import { ArtistaComponent } from './components/artista/artista.component';
     ArtistaComponent
   ],
   imports: [
-    BrowserModule,
+    HttpClientModule,
+    BrowserModule,    
     APP_ROUTING
   ],
   providers: [],
