@@ -16,14 +16,27 @@ export class SolicitudesService {
 
 
 
-  getQuery( ) {
+  ultimosLanzamientos() {
     const headers = new HttpHeaders({
       'Authorization': this.globalServ.getAutorization()
     });
 
-    return this.http.get(this.globalServ.getUrlApi()+"browse/new-releases?limit=20", { headers }).subscribe(res=>{
-      console.log(res);
+    return this.http.get(this.globalServ.getUrlApi()+"browse/new-releases?limit=10", { headers });
+  }
+
+  detalleArtista(idartista:string) {
+    const headers = new HttpHeaders({
+      'Authorization': this.globalServ.getAutorization()
     });
 
+    return this.http.get(this.globalServ.getUrlApi()+"artists/"+idartista, { headers });
+  }
+
+  topTrack(idartista:string) {
+    const headers = new HttpHeaders({
+      'Authorization': this.globalServ.getAutorization()
+    });
+
+    return this.http.get(this.globalServ.getUrlApi()+"artists/"+idartista+"/top-tracks?country=us", { headers });
   }
 }
